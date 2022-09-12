@@ -1,0 +1,38 @@
+//declaramos mapa para redes//
+
+$redes:(
+    facebook:#5858ba69,
+    instagram:#ff000071,
+    tiktok:#0080005a
+    );
+@each $red, $color in $redes{
+    .btn--#{$red}{
+        background-color:$color;
+    }
+}
+$footer:(
+    color:$bgSecundario,
+    centro:center,
+    padding:0rem,
+    border:5px,
+    margin:0px
+);
+footer{
+    background-color: map-get($footer,color);
+    text-align: map-get($footer,centro);
+    padding: map-get($footer,padding);
+    border-radius:map-get($footer,border);
+    margin-top:map-get($footer,margin);
+}
+
+/*@mixin color-shadow-text{
+    background-color:$bgSecundario;
+    box-shadow:0 0.5rem 0.5rem #00000026;
+    margin-bottom:0px;
+    justify-items:center;
+    border-radius: 15px;
+    
+}
+.cst{
+    @include color-shadow-text;
+}//*/

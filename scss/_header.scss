@@ -1,0 +1,29 @@
+//map-get para header//
+
+$header:(
+    color:$bgSecundario,
+    centro:center,
+    padding:.5rem,
+    border:5px,
+    margin:10px
+);
+header{
+    background-color: map-get($header,color);
+    text-align: map-get($header,centro);
+    padding: map-get($header,padding);
+    border-radius:map-get($header,border);
+    margin-top:map-get($header,margin)
+}
+@mixin color-shadow-text{
+    background-color:$bgSecundario;
+    box-shadow:0 0.5rem 0.5rem #00000026;
+    justify-items:center;
+    border-radius: 15px;
+    
+}
+.cstHeader{
+    @include color-shadow-text;
+}
+.carrito-user{
+    margin-top: 5px;
+}
