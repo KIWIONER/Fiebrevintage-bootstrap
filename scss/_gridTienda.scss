@@ -7,8 +7,20 @@
         "footer footer footer footer footer";
 	grid-template-rows: auto auto auto;
 	grid-template-columns:5% 30% 30% 30% 5%;
+    @media (max-width:769px){
+        .gridTienda {
+        grid-template-areas: 
+            "header"
+            "tituloPrincipal"
+            "tarjetaProducto"
+            "footer";
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3,auto);
+            grid-row-gap: 5px;
+        }
+    }  
 }
-.tarjetaProducto {grid-area:tarjetaProducto; 
+.tarjetaProducto {grid-area: tarjetaProducto; 
     display:grid;
     grid-template-areas: 
         ". tarjetaProducto1 tarjetaProducto2 tarjetaProducto3 ."
@@ -18,9 +30,28 @@
         grid-template-rows: auto auto auto auto;
         grid-template-columns:5% 30% 30% 30% 5%;
         justify-content: center;
-    
-    }
 
+}
+    @media (max-width:769px){
+        .tarjetaProducto {
+            grid-template-areas: 
+                "tarjetaProducto1"
+                "tarjetaProducto2"
+                "tarjetaProducto3"
+                "tarjetaProducto4"
+                "tarjetaProducto5"
+                "tarjetaProducto6"
+                "tarjetaProducto7"
+                "tarjetaProducto8"
+                "tarjetaProducto9"
+                "tarjetaProducto10"
+                "tarjetaProducto11"
+                "tarjetaProducto12";
+            grid-template-columns:100%;
+            grid-template-rows:repeat(auto);
+            grid-row-gap: 5px;
+            }
+    }
     .tarjetaProducto1{grid-area:tarjetaProducto1 ;}
     .tarjetaProducto2{grid-area:tarjetaProducto2 ;}
     .tarjetaProducto3{grid-area:tarjetaProducto3 ;}
@@ -33,20 +64,9 @@
     .tarjetaProducto10{grid-area:tarjetaProducto10 ;}
     .tarjetaProducto11{grid-area:tarjetaProducto11 ;}
     .tarjetaProducto12{grid-area:tarjetaProducto12 ;}
+
     header{grid-area: header;}
     footer{grid-area:footer;}
     .tituloPrincipal{grid-area: tituloPrincipal;display: flex; flex-direction: column;text-align: center;}
-
-    @media (max-width:769px){
-        .gridTienda{
-            grid-template-areas: 
-            "header"
-            "tarjetaProducto"
-            "footer";
-            grid-template-columns: 100%;
-            grid-template-rows: repeat(3, auto);
-            grid-row-gap: 5px;}
-        }
-        header{display: flex; flex-direction: column;}
-        .tarjetaProducto{display:flex; flex-direction: column;text-align: center;align-items: center;margin-top: 20px;}
-        .tituloPrincipal{display: none;}
+    header{display:flex; flex-direction: column;}
+    .tarjetaProducto{ flex-direction: column;text-align: center;align-content: center;margin-top: 20px;}
