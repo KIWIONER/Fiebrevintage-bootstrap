@@ -76,6 +76,27 @@ footer {
   flex-direction: column;
   text-align: center; }
 
+@media (max-width: 769px) {
+  .gridTienda {
+    grid-template-areas: "header" "tarjetaProducto" "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 5px; } }
+
+header {
+  display: flex;
+  flex-direction: column; }
+
+.tarjetaProducto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px; }
+
+.tituloPrincipal {
+  display: none; }
+
 .btn--facebook {
   background-color: #5858ba69; }
 
