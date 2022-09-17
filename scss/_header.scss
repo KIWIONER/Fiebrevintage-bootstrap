@@ -3,9 +3,9 @@
 $header:(
     color:$bgSecundario,
     centro:center,
-    padding:.5rem,
+    padding:0.5rem,
     border:5px,
-    margin:10px
+    margin:0px
 );
 header{
     background-color: map-get($header,color);

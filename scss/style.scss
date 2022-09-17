@@ -1,9 +1,12 @@
 @import"_colores";
 @import"_font-size";
 @import "_header";
+@import "_gridTIenda";
 @import "_footer";
 
-body{background-color:white;}
+
+body{background-color:white;
+padding:20px;}
 /*------------css para header------------*/
 /*--------NAVBAR--------------*/
 .navbar{justify-items: space-evenly;}
@@ -11,12 +14,12 @@ body{background-color:white;}
 
 p {font-size: 20px;}
 
-.row{text-align:center; margin:40px 40px 40px 40px;justify-items: space-evenly; justify-content: space-evenly;}
+/*.row{text-align:center; margin:40px 40px 40px 40px;justify-items: space-evenly; justify-content: space-evenly;}*/
 
 //map-get para contenedores//
 $box :(
     centro:center,
-    margin: 40px,
+    margin: 0px,
     justify: center,
     align:center,
     txtColor: $colorTxtN,
@@ -28,17 +31,17 @@ div{
     color:map-get($box, txtColor)
 }
 
- .btn{display:inline-block; justify-content:center; justify-items:center; text-align:center;font-size: 15px;
-     input{display:inline-block;width:180px; height: 40px; justify-content:center; 
+.btn{display:inline-block; justify-content:center; justify-items:center; text-align:center;font-size: 15px;
+    input{display:inline-block;width:180px; height: 40px; justify-content:center; 
         justify-items:center; text-align:center;font-size: 15px;}
     }
 .carousel-item{
     img{width:100%;}
 }
 .card-body{border-radius: 45px;
- button{flex: 1 1 auto; width: 180px;}
+    button{flex: 1 1 auto; width: 180px;}
 }
-img{ border-radius: 15px;}
+img{ border-radius: 10px;}
 h2{font-size: 30px;text-align:center;}
 /*h3{font-size: 25px;margin-top: 10px; text-align:center;}*/
 .shadow {box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);}
@@ -48,8 +51,8 @@ h2{font-size: 30px;text-align:center;}
 }
 
 @keyframes change{
-  0% {transform: translatey(-10px);}
-  100% {transform: translatey(10px);}
+    0% {transform: translatey(-10px);}
+    100% {transform: translatey(10px);}
 }
 .shadow-none {box-shadow: none;}
 
@@ -69,7 +72,7 @@ header{
     }
 }
 div{ 
-    utton{ justify-self: center; }
+    button{ justify-self: center; }
 }
 
 
@@ -85,10 +88,11 @@ div{
 @mixin color-shadow-text{
     background-color:$bgSecundario;
     box-shadow:0 0.5rem 0.5rem #00000026;
-    margin-bottom:20px;
-    justify-items:center;
+    justify-content:space-evenly ;
+    margin:10px 0px 10px 0px;
+    align-content: center;
     border-radius: 15px;
-    
+
 }
 .cst,header,footer{
     @include color-shadow-text;
@@ -97,7 +101,17 @@ div{
 .cstCard{
     @extend .cst;
     background-color: #9898dc;
-    margin-bottom: 0px;
-        a{text-decoration: none;
-        color:$colorTxt;}
+    a{text-decoration: none;color:$colorTxt;};
+    margin: 20px 20px 20px 20px;
+    img{box-shadow:0 0.5rem 0.5rem #0000006b;}
 }
+.imgWelcome{
+    @extend .cst;
+    max-width: 100%;
+    align-self: center;
+    
+    background-color: #ffffff;
+    box-shadow:none;
+    
+}
+/*position-absolute top-50 start-50 translate-middle*/

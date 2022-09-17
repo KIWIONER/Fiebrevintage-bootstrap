@@ -3,7 +3,7 @@ header {
   text-align: center;
   padding: 0.5rem;
   border-radius: 5px;
-  margin-top: 10px; }
+  margin-top: 0px; }
 
 .cstHeader {
   background-color: #adff2f;
@@ -13,6 +13,68 @@ header {
 
 .carrito-user {
   margin-top: 5px; }
+
+.gridTienda {
+  display: grid;
+  grid-template-areas: "header header header header header" ". tituloPrincipal tituloPrincipal tituloPrincipal ." ". tarjetaProducto tarjetaProducto tarjetaProducto ." "footer footer footer footer footer";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 5% 30% 30% 30% 5%; }
+
+.tarjetaProducto {
+  grid-area: tarjetaProducto;
+  display: grid;
+  grid-template-areas: ". tarjetaProducto1 tarjetaProducto2 tarjetaProducto3 ." ". tarjetaProducto4 tarjetaProducto5 tarjetaProducto6 ." ". tarjetaProducto7 tarjetaProducto8 tarjetaProducto9 ." ". tarjetaProducto10 tarjetaProducto11 tarjetaProducto12 .";
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 5% 30% 30% 30% 5%;
+  justify-content: center; }
+
+.tarjetaProducto1 {
+  grid-area: tarjetaProducto1; }
+
+.tarjetaProducto2 {
+  grid-area: tarjetaProducto2; }
+
+.tarjetaProducto3 {
+  grid-area: tarjetaProducto3; }
+
+.tarjetaProducto4 {
+  grid-area: tarjetaProducto4; }
+
+.tarjetaProducto5 {
+  grid-area: tarjetaProducto5; }
+
+.tarjetaProducto6 {
+  grid-area: tarjetaProducto6; }
+
+.tarjetaProducto7 {
+  grid-area: tarjetaProducto7; }
+
+.tarjetaProducto8 {
+  grid-area: tarjetaProducto8; }
+
+.tarjetaProducto9 {
+  grid-area: tarjetaProducto9; }
+
+.tarjetaProducto10 {
+  grid-area: tarjetaProducto10; }
+
+.tarjetaProducto11 {
+  grid-area: tarjetaProducto11; }
+
+.tarjetaProducto12 {
+  grid-area: tarjetaProducto12; }
+
+header {
+  grid-area: header; }
+
+footer {
+  grid-area: footer; }
+
+.tituloPrincipal {
+  grid-area: tituloPrincipal;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
 
 .btn--facebook {
   background-color: #5858ba69; }
@@ -30,19 +92,9 @@ footer {
   border-radius: 5px;
   margin-top: 0px; }
 
-/*@mixin color-shadow-text{
-    background-color:$bgSecundario;
-    box-shadow:0 0.5rem 0.5rem #00000026;
-    margin-bottom:0px;
-    justify-items:center;
-    border-radius: 15px;
-    
-}
-.cst{
-    @include color-shadow-text;
-}//*/
 body {
-  background-color: white; }
+  background-color: white;
+  padding: 20px; }
 
 /*------------css para header------------*/
 /*--------NAVBAR--------------*/
@@ -53,12 +105,7 @@ body {
 p {
   font-size: 20px; }
 
-.row {
-  text-align: center;
-  margin: 40px 40px 40px 40px;
-  justify-items: space-evenly;
-  justify-content: space-evenly; }
-
+/*.row{text-align:center; margin:40px 40px 40px 40px;justify-items: space-evenly; justify-content: space-evenly;}*/
 div {
   text-align: center;
   align-items: center;
@@ -90,7 +137,7 @@ div {
     width: 180px; }
 
 img {
-  border-radius: 15px; }
+  border-radius: 10px; }
 
 h2 {
   font-size: 30px;
@@ -141,7 +188,7 @@ nav:hover {
 header li a {
   font-size: 20px; }
 
-div utton {
+div button {
   justify-self: center; }
 
 .op-1 {
@@ -174,17 +221,28 @@ div utton {
 .op-10 {
   opacity: 100%; }
 
-.cst, .cstCard, header, footer {
+.cst, .cstCard, .imgWelcome, header, footer {
   background-color: #adff2f;
   box-shadow: 0 0.5rem 0.5rem #00000026;
-  margin-bottom: 20px;
-  justify-items: center;
+  justify-content: space-evenly;
+  margin: 10px 0px 10px 0px;
+  align-content: center;
   border-radius: 15px; }
 
 /*extend */
 .cstCard {
   background-color: #9898dc;
-  margin-bottom: 0px; }
+  margin: 20px 20px 20px 20px; }
   .cstCard a {
     text-decoration: none;
     color: #ffffff; }
+  .cstCard img {
+    box-shadow: 0 0.5rem 0.5rem #0000006b; }
+
+.imgWelcome {
+  max-width: 100%;
+  align-self: center;
+  background-color: #ffffff;
+  box-shadow: none; }
+
+/*position-absolute top-50 start-50 translate-middle*/

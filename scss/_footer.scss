@@ -10,6 +10,8 @@ $redes:(
         background-color:$color;
     }
 }
+
+//declaramos un map-get para footer//
 $footer:(
     color:$bgSecundario,
     centro:center,
@@ -24,15 +26,3 @@ footer{
     border-radius:map-get($footer,border);
     margin-top:map-get($footer,margin);
 }
-
-/*@mixin color-shadow-text{
-    background-color:$bgSecundario;
-    box-shadow:0 0.5rem 0.5rem #00000026;
-    margin-bottom:0px;
-    justify-items:center;
-    border-radius: 15px;
-    
-}
-.cst{
-    @include color-shadow-text;
-}//*/
