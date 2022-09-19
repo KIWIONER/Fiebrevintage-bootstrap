@@ -1,15 +1,16 @@
 @import"_colores";
 @import"_font-size";
-@import "_header";
+@import "_header";;
+@import"_blog";
 @import "_gridTIenda";
 @import "_footer";
 
 
-body{background-color:white;
-padding:20px;}
+body{background-color:white;padding:20px;}
+main{overflow: hidden;}
 /*------------css para header------------*/
 /*--------NAVBAR--------------*/
-.navbar{justify-items: space-evenly;}
+.navbar{justify-items:space-evenly;}
 /*-----------------FIN NAVBAR-------------*/
 
 p {font-size: 20px;}
@@ -23,18 +24,39 @@ $box :(
     justify: center,
     align:center,
     txtColor: $colorTxtN,
+    border: 5px,
     );   
 div{
     text-align: map-get($box,centro);
     align-items:map-get($box,align);
     justify-content: map-get($box, justify);
-    color:map-get($box, txtColor)
+    color:map-get($box, txtColor);
+    border:map-get($box, border);
 }
-
-.btn{display:inline-block; justify-content:center; justify-items:center; text-align:center;font-size: 15px;
-    input{display:inline-block;width:180px; height: 40px; justify-content:center; 
-        justify-items:center; text-align:center;font-size: 15px;}
-    }
+//-----------//MIXIN PARA BOTONES//--------------
+@mixin btn{
+    justify-items:center;
+    width:180px;
+    height:40px;
+    font-size:15px;
+    text-align:center;
+    background-color:$colorButton;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color:$colorTxt;
+    a{text-decoration:none; color:$colorTxt;}
+}
+.btn{
+    @include btn;
+}
+.add{
+    @extend .btn;
+    background-color: $colorTxt;
+    border: solid 2px green;
+    color:$colorButton;
+}
+//----------------------------------------------//
+//-------------clases importantes a tener en cuenta--------------
 .carousel-item{
     img{width:100%;}
 }
@@ -44,28 +66,23 @@ div{
 img{ border-radius: 10px;}
 h2{font-size: 30px;text-align:center;}
 /*h3{font-size: 25px;margin-top: 10px; text-align:center;}*/
+.shadow-none {box-shadow: none;}
 .shadow {box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);}
 .shadow-lg {box-shadow: 3 1rem 5rem rgba(0, 0, 0, 0.175);}
 .logo{box-shadow: none;border-radius: 0px; }
 .logo2{box-shadow: none;border-radius: 0px; animation: change 1.5s infinite alternate;
 }
-
-@keyframes change{
+//---------//keyframes//---------------
+/*@keyframes change{
     0% {transform: translatey(-10px);}
     100% {transform: translatey(10px);}
-}
-.shadow-none {box-shadow: none;}
-
-
+}*/
+//---------------------------------------//
+//----------//estiquetas importantes para header+ navegador//---------------
 nav{
     a {font-size: 20px;text-decoration: none; color: black;}
         &:hover {color:white; text-decoration: none;}
 }
-
-.row2{ align-content: center;margin-top: 0px; border-radius:0px;
-    img{margin-top: 20px; border-radius:0px; }
-}
-
 header{
     li{
         a{font-size: 20px;}
@@ -74,23 +91,21 @@ header{
 div{ 
     button{ justify-self: center; }
 }
-//bucle para opacidad //
-
+//------------------------------------------//
+//------------//bucle para opacidad //----------------------
 @for $opacity from 1 through 10 {
     .op-#{$opacity}{
         opacity:10% * $opacity;
     }
 }
-
-//mixin//
+//---------------------------------------------------------//
+//-------------//mixin para contenedores//--------------------------------
 @mixin color-shadow-text{
     background-color:$bgSecundario;
     box-shadow:0 0.5rem 0.5rem #00000026;
     justify-content:space-evenly ;
-    margin:10px 0px 10px 0px;
     align-content: center;
-    border-radius: 15px;
-
+    border-radius:15px;
 }
 .cst,header,footer{
     @include color-shadow-text;
@@ -98,18 +113,29 @@ div{
 /*extend */
 .cstCard{
     @extend .cst;
-    background-color: #9898dc;
+
     a{text-decoration: none;color:$colorTxt;};
-    margin: 20px 20px 20px 20px;
-    img{box-shadow:0 0.5rem 0.5rem #0000006b;}
+    img{box-shadow:0 0.5rem 0.5rem #0000006b;width:90%;text-align:center}
+    color: $colorTxtN;
+    padding:10px;
+    max-width:90%;
+    margin:10px;
 }
-.imgWelcome{
-    @extend .cst;
+.csttxtCard{
+    @extend .cstCard;
+    max-width: 40rem;
+    margin: 40px; 
+    padding:20px;  
+}
+.noshadow{
+    @extend .cstCard;
+    box-shadow: none;
+}
+.cstForm{
+    @extend .cstCard;
     max-width: 100%;
-    align-self: center;
-    
-    background-color: #ffffff;
-    box-shadow:none;
-    
+    justify-content: center;
+    text-align: center;
+    padding: 0%;
 }
-/*position-absolute top-50 start-50 translate-middle*/
+//--------------------------------------------------------------------------

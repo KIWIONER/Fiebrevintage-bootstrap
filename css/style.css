@@ -3,7 +3,7 @@ header {
   text-align: center;
   padding: 0.5rem;
   border-radius: 5px;
-  margin-top: 0px; }
+  margin: 0px; }
 
 .cstHeader {
   background-color: #adff2f;
@@ -13,6 +13,37 @@ header {
 
 .carrito-user {
   margin-top: 5px; }
+
+.cstBlog, .cstCardBlog, .csttxtCardBlog, .indice, header, footer {
+  background-color: #adff2f;
+  box-shadow: 0 0.5rem 0.5rem #00000026;
+  justify-content: space-evenly;
+  align-content: center;
+  border-radius: 5px; }
+
+/*extend */
+.cstCardBlog, .csttxtCardBlog, .indice {
+  color: #000000;
+  padding: 10px;
+  margin-bottom: 10px;
+  max-width: 100%; }
+  .cstCardBlog a, .csttxtCardBlog a, .indice a {
+    text-decoration: none;
+    color: #ffffff; }
+  .cstCardBlog img, .csttxtCardBlog img, .indice img {
+    box-shadow: 0 0.5rem 0.5rem #0000006b; }
+
+.indice {
+  text-align: center;
+  max-width: 40rem;
+  background-color: #e150e1a5;
+  justify-content: center;
+  list-style-type: none;
+  width: 100%; }
+  .indice a {
+    color: black; }
+  .indice ul {
+    align-items: center; }
 
 .gridTienda {
   display: grid;
@@ -115,9 +146,15 @@ footer {
   border-radius: 5px;
   margin-top: 0px; }
 
+.suscribete {
+  padding: 10px; }
+
 body {
   background-color: white;
   padding: 20px; }
+
+main {
+  overflow: hidden; }
 
 /*------------css para header------------*/
 /*--------NAVBAR--------------*/
@@ -133,22 +170,27 @@ div {
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: #000000; }
+  color: #000000;
+  border: 5px; }
 
-.btn {
-  display: inline-block;
-  justify-content: center;
+.btn, .add {
   justify-items: center;
+  width: 180px;
+  height: 40px;
+  font-size: 15px;
   text-align: center;
-  font-size: 15px; }
-  .btn input {
-    display: inline-block;
-    width: 180px;
-    height: 40px;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    font-size: 15px; }
+  background-color: #000000;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: #ffffff; }
+  .btn a, .add a {
+    text-decoration: none;
+    color: #ffffff; }
+
+.add {
+  background-color: #ffffff;
+  border: solid 2px green;
+  color: #000000; }
 
 .carousel-item img {
   width: 100%; }
@@ -167,6 +209,9 @@ h2 {
   text-align: center; }
 
 /*h3{font-size: 25px;margin-top: 10px; text-align:center;}*/
+.shadow-none {
+  box-shadow: none; }
+
 .shadow {
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15); }
 
@@ -182,15 +227,10 @@ h2 {
   border-radius: 0px;
   animation: change 1.5s infinite alternate; }
 
-@keyframes change {
-  0% {
-    transform: translatey(-10px); }
-  100% {
-    transform: translatey(10px); } }
-
-.shadow-none {
-  box-shadow: none; }
-
+/*@keyframes change{
+    0% {transform: translatey(-10px);}
+    100% {transform: translatey(10px);}
+}*/
 nav a {
   font-size: 20px;
   text-decoration: none;
@@ -199,14 +239,6 @@ nav a {
 nav:hover {
   color: white;
   text-decoration: none; }
-
-.row2 {
-  align-content: center;
-  margin-top: 0px;
-  border-radius: 0px; }
-  .row2 img {
-    margin-top: 20px;
-    border-radius: 0px; }
 
 header li a {
   font-size: 20px; }
@@ -244,28 +276,37 @@ div button {
 .op-10 {
   opacity: 100%; }
 
-.cst, .cstCard, .imgWelcome, header, footer {
+.cst, .cstCard, .csttxtCard, .noshadow, .cstForm, header, footer {
   background-color: #adff2f;
   box-shadow: 0 0.5rem 0.5rem #00000026;
   justify-content: space-evenly;
-  margin: 10px 0px 10px 0px;
   align-content: center;
   border-radius: 15px; }
 
 /*extend */
-.cstCard {
-  background-color: #9898dc;
-  margin: 20px 20px 20px 20px; }
-  .cstCard a {
+.cstCard, .csttxtCard, .noshadow, .cstForm {
+  color: #000000;
+  padding: 10px;
+  max-width: 90%;
+  margin: 10px; }
+  .cstCard a, .csttxtCard a, .noshadow a, .cstForm a {
     text-decoration: none;
     color: #ffffff; }
-  .cstCard img {
-    box-shadow: 0 0.5rem 0.5rem #0000006b; }
+  .cstCard img, .csttxtCard img, .noshadow img, .cstForm img {
+    box-shadow: 0 0.5rem 0.5rem #0000006b;
+    width: 90%;
+    text-align: center; }
 
-.imgWelcome {
-  max-width: 100%;
-  align-self: center;
-  background-color: #ffffff;
+.csttxtCard {
+  max-width: 40rem;
+  margin: 40px;
+  padding: 20px; }
+
+.noshadow {
   box-shadow: none; }
 
-/*position-absolute top-50 start-50 translate-middle*/
+.cstForm {
+  max-width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 0%; }
