@@ -24,7 +24,6 @@ $box :(
     justify: center,
     align:center,
     txtColor: $colorTxtN,
-    border: 5px,
     );   
 div{
     text-align: map-get($box,centro);
@@ -63,8 +62,22 @@ div{
 .card-body{border-radius: 45px;
     button{flex: 1 1 auto; width: 180px;}
 }
+
+
+/*----------MIXIN PARA IMAGENES-------------*/
 img{ border-radius: 10px;}
-h2{font-size: 30px;text-align:center;}
+@mixin imgContainer{
+    border-radius: 15px;
+    max-width:100%;
+    border: solid 25px $bgSecundario;
+}
+.imgContainer{
+    @include imgContainer;
+}
+
+.bg-warning{text-align:center;border: 2px;}
+
+h2{font-size: 30px;text-align: center; }
 /*h3{font-size: 25px;margin-top: 10px; text-align:center;}*/
 .shadow-none {box-shadow: none;}
 .shadow {box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);}
@@ -101,9 +114,10 @@ div{
 //---------------------------------------------------------//
 //-------------//mixin para contenedores//--------------------------------
 @mixin color-shadow-text{
-    background-color:$bgSecundario;
-    box-shadow:0 0.5rem 0.5rem #00000026;
-    justify-content:space-evenly ;
+    /*background-color:$bgSecundario;*/
+    /*box-shadow:0 2px 0px #00000026;*/
+    max-width: 100%;
+    justify-content:center;
     align-content: center;
     border-radius:15px;
 }
@@ -113,13 +127,13 @@ div{
 /*extend */
 .cstCard{
     @extend .cst;
-
+    /*background-color: $bgSecundario;*/
     a{text-decoration: none;color:$colorTxt;};
-    img{box-shadow:0 0.5rem 0.5rem #0000006b;width:90%;text-align:center}
+    img{box-shadow:0 0.5rem 0.5rem #0000006b;text-align:center}
     color: $colorTxtN;
-    padding:10px;
-    max-width:90%;
-    margin:10px;
+    padding:0px;
+    margin:0px;
+    max-width: 120rem;
 }
 .csttxtCard{
     @extend .cstCard;

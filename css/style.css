@@ -14,36 +14,69 @@ header {
 .carrito-user {
   margin-top: 5px; }
 
-.cstBlog, .cstCardBlog, .csttxtCardBlog, .indice, header, footer {
-  background-color: #adff2f;
+.cstBlog, .cstCardReview, .cstCardForm, .cstCardBlog, .csttxtCardBlog, .indice, header, footer {
+  /*background-color:$bgSecundario;*/
   box-shadow: 0 0.5rem 0.5rem #00000026;
   justify-content: space-evenly;
   align-content: center;
-  border-radius: 5px; }
+  border-radius: 15px;
+  border: solid 10px #adff2f; }
 
 /*extend */
+.cstCardReview {
+  height: 200px;
+  padding: 10px; }
+  .cstCardReview p {
+    font-size: 15px; }
+
+.cstCardForm {
+  max-width: 50rem;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 4rem; }
+
 .cstCardBlog, .csttxtCardBlog, .indice {
   color: #000000;
-  padding: 10px;
+  padding: 0px;
   margin-bottom: 10px;
-  max-width: 100%; }
+  height: 450px; }
   .cstCardBlog a, .csttxtCardBlog a, .indice a {
     text-decoration: none;
     color: #ffffff; }
   .cstCardBlog img, .csttxtCardBlog img, .indice img {
-    box-shadow: 0 0.5rem 0.5rem #0000006b; }
+    width: 29rem;
+    height: 15rem;
+    padding: 1rem 2rem 0rem 2rem; }
+  .cstCardBlog h2, .csttxtCardBlog h2, .indice h2 {
+    font-size: 25px;
+    padding: 2rem 2rem 0rem 2rem; }
+  .cstCardBlog h3, .csttxtCardBlog h3, .indice h3 {
+    font-size: 20px;
+    padding: 0rem 2rem 0rem 2rem; }
 
 .indice {
   text-align: center;
-  max-width: 40rem;
-  background-color: #e150e1a5;
+  align-content: center;
+  max-width: 28rem;
+  max-height: 2.5rem;
+  /*background-color: $bgList;*/
   justify-content: center;
-  list-style-type: none;
-  width: 100%; }
+  border: solid 5px #adff2f;
+  margin-right: 30px;
+  list-style-type: none; }
   .indice a {
-    color: black; }
-  .indice ul {
-    align-items: center; }
+    color: #000000; }
+    .indice a:hover {
+      border-bottom: solid 2px #000000; }
+  .indice li {
+    justify-items: center; }
+
+ul li {
+  list-style-type: none;
+  margin-right: 10px; }
+  ul li a {
+    text-decoration: none;
+    color: #000000; }
 
 .gridTienda {
   display: grid;
@@ -170,8 +203,7 @@ div {
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: #000000;
-  border: 5px; }
+  color: #000000; }
 
 .btn, .add {
   justify-items: center;
@@ -201,8 +233,18 @@ div {
     flex: 1 1 auto;
     width: 180px; }
 
+/*----------MIXIN PARA IMAGENES-------------*/
 img {
   border-radius: 10px; }
+
+.imgContainer {
+  border-radius: 15px;
+  max-width: 100%;
+  border: solid 25px #adff2f; }
+
+.bg-warning {
+  text-align: center;
+  border: 2px; }
 
 h2 {
   font-size: 30px;
@@ -277,24 +319,25 @@ div button {
   opacity: 100%; }
 
 .cst, .cstCard, .csttxtCard, .noshadow, .cstForm, header, footer {
-  background-color: #adff2f;
-  box-shadow: 0 0.5rem 0.5rem #00000026;
-  justify-content: space-evenly;
+  /*background-color:$bgSecundario;*/
+  /*box-shadow:0 2px 0px #00000026;*/
+  max-width: 100%;
+  justify-content: center;
   align-content: center;
   border-radius: 15px; }
 
 /*extend */
 .cstCard, .csttxtCard, .noshadow, .cstForm {
+  /*background-color: $bgSecundario;*/
   color: #000000;
-  padding: 10px;
-  max-width: 90%;
-  margin: 10px; }
+  padding: 0px;
+  margin: 0px;
+  max-width: 120rem; }
   .cstCard a, .csttxtCard a, .noshadow a, .cstForm a {
     text-decoration: none;
     color: #ffffff; }
   .cstCard img, .csttxtCard img, .noshadow img, .cstForm img {
     box-shadow: 0 0.5rem 0.5rem #0000006b;
-    width: 90%;
     text-align: center; }
 
 .csttxtCard {
