@@ -78,6 +78,31 @@ ul li {
     text-decoration: none;
     color: #000000; }
 
+.titulo {
+  border: solid 4px #ffffff;
+  max-width: 50%;
+  justify-content: center;
+  color: black;
+  background-color: #adff2f;
+  box-shadow: 0 0.5rem 0.5rem #00000026; }
+
+.indiceList {
+  list-style-type: none;
+  text-align: center;
+  justify-content: center; }
+
+.indiceProducto {
+  border: solid 2px #adff2f;
+  width: 100%;
+  border-radius: 15px;
+  margin: 5px; }
+
+.cstCardReview {
+  height: 200px;
+  padding: 10px; }
+  .cstCardReview p {
+    font-size: 15px; }
+
 .gridTienda {
   display: grid;
   grid-template-areas: "header header header header header" ". tituloPrincipal tituloPrincipal tituloPrincipal ." ". tarjetaProducto tarjetaProducto tarjetaProducto ." "footer footer footer footer footer";
@@ -175,12 +200,9 @@ header {
 footer {
   background-color: #adff2f;
   text-align: center;
-  padding: 0rem;
+  padding: 1rem;
   border-radius: 5px;
-  margin-top: 0px; }
-
-.suscribete {
-  padding: 10px; }
+  margin-top: 15px; }
 
 body {
   background-color: white;
@@ -207,22 +229,26 @@ div {
 
 .btn, .add {
   justify-items: center;
-  width: 180px;
+  width: 230px;
   height: 40px;
   font-size: 15px;
   text-align: center;
   background-color: #000000;
   margin-bottom: 20px;
   border-radius: 5px;
-  color: #ffffff; }
+  color: #ffffff;
+  border: solid 2px #000000; }
   .btn a, .add a {
     text-decoration: none;
     color: #ffffff; }
+  .btn:hover, .add:hover {
+    background-color: #adff2f; }
 
 .add {
   background-color: #ffffff;
-  border: solid 2px green;
-  color: #000000; }
+  border: solid 2px #000000;
+  color: #000000;
+  width: 180px; }
 
 .carousel-item img {
   width: 100%; }
@@ -318,25 +344,23 @@ div button {
 .op-10 {
   opacity: 100%; }
 
-.cst, .cstCard, .csttxtCard, .noshadow, .cstForm, header, footer {
-  /*background-color:$bgSecundario;*/
-  /*box-shadow:0 2px 0px #00000026;*/
+.cst, .cstCard, .csttxtCard, .noshadow, .cstForm, .cstProducto, header, footer {
   max-width: 100%;
   justify-content: center;
   align-content: center;
   border-radius: 15px; }
 
 /*extend */
-.cstCard, .csttxtCard, .noshadow, .cstForm {
+.cstCard, .csttxtCard, .noshadow, .cstForm, .cstProducto {
   /*background-color: $bgSecundario;*/
   color: #000000;
   padding: 0px;
   margin: 0px;
   max-width: 120rem; }
-  .cstCard a, .csttxtCard a, .noshadow a, .cstForm a {
+  .cstCard a, .csttxtCard a, .noshadow a, .cstForm a, .cstProducto a {
     text-decoration: none;
     color: #ffffff; }
-  .cstCard img, .csttxtCard img, .noshadow img, .cstForm img {
+  .cstCard img, .csttxtCard img, .noshadow img, .cstForm img, .cstProducto img {
     box-shadow: 0 0.5rem 0.5rem #0000006b;
     text-align: center; }
 
@@ -353,3 +377,8 @@ div button {
   justify-content: center;
   text-align: center;
   padding: 0%; }
+
+.cstProducto {
+  max-width: 100%;
+  border: solid 10px #adff2f;
+  box-shadow: none; }

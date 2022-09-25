@@ -1,0 +1,22 @@
+
+@mixin indiceProducto{
+    list-style-type:none;
+    text-align: center;
+    justify-content: center;
+}
+.indiceList{
+    @include indiceProducto;
+}
+.indiceProducto{
+    @extend .indiceProducto;
+    border: solid 2px $bgSecundario;
+    width:100%;
+    border-radius: 15px;
+    margin: 5px;
+}
+.cstCardReview{
+    @extend .cstBlog;
+    height:200px;
+    padding: 10px;
+    p{font-size: 15px;}
+}

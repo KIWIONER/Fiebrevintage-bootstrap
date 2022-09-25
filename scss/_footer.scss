@@ -15,9 +15,9 @@ $redes:(
 $footer:(
     color:$bgSecundario,
     centro:center,
-    padding:0rem,
+    padding:1rem,
     border:5px,
-    margin:0px
+    margin:15px,
 );
 footer{
     background-color: map-get($footer,color);
@@ -25,8 +25,4 @@ footer{
     padding: map-get($footer,padding);
     border-radius:map-get($footer,border);
     margin-top:map-get($footer,margin);
-}
-.suscribete{
-    padding:10px;
-
 }

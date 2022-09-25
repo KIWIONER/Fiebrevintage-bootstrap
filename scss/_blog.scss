@@ -60,3 +60,14 @@ ul{
             text-decoration: none;color:$colorTxtN;
         }}
 }
+@mixin titulo{
+border: solid 4px $colorTxt;
+max-width: 50%;
+justify-content: center;
+color:black;
+background-color: $bgSecundario;
+box-shadow: 0 0.5rem 0.5rem #00000026;
+}
+.titulo{
+    @include titulo;
+}

@@ -2,6 +2,7 @@
 @import"_font-size";
 @import "_header";;
 @import"_blog";
+@import"_producto";
 @import "_gridTIenda";
 @import "_footer";
 
@@ -30,12 +31,11 @@ div{
     align-items:map-get($box,align);
     justify-content: map-get($box, justify);
     color:map-get($box, txtColor);
-    border:map-get($box, border);
 }
 //-----------//MIXIN PARA BOTONES//--------------
 @mixin btn{
     justify-items:center;
-    width:180px;
+    width:230px;
     height:40px;
     font-size:15px;
     text-align:center;
@@ -43,16 +43,21 @@ div{
     margin-bottom: 20px;
     border-radius: 5px;
     color:$colorTxt;
-    a{text-decoration:none; color:$colorTxt;}
+    border: solid 2px $colorTxtN;
+    a{text-decoration:none;color:$colorTxt;}
+        &:hover{background-color:$bgSecundario;}
+    
 }
 .btn{
-    @include btn;
+    @include btn
 }
+
 .add{
     @extend .btn;
     background-color: $colorTxt;
-    border: solid 2px green;
+    border: solid 2px $colorTxtN;
     color:$colorButton;
+    width: 180px; 
 }
 //----------------------------------------------//
 //-------------clases importantes a tener en cuenta--------------
@@ -114,8 +119,6 @@ div{
 //---------------------------------------------------------//
 //-------------//mixin para contenedores//--------------------------------
 @mixin color-shadow-text{
-    /*background-color:$bgSecundario;*/
-    /*box-shadow:0 2px 0px #00000026;*/
     max-width: 100%;
     justify-content:center;
     align-content: center;
@@ -151,5 +154,11 @@ div{
     justify-content: center;
     text-align: center;
     padding: 0%;
+}
+.cstProducto{
+    @extend .cstCard;
+    max-width: 100%;
+    border: solid 10px $bgSecundario;
+    box-shadow: none;
 }
 //--------------------------------------------------------------------------
