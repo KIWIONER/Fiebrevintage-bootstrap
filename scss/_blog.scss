@@ -26,14 +26,16 @@
 }
 .cstCardBlog{
     @extend .cstBlog;
+    border: none;
+    box-shadow: none;
     a{text-decoration: none;color:$colorTxt;};
-    img{width: 29rem; height:15rem;padding:1rem 2rem 0rem 2rem;}
+    img{width: 100%; height:50% ;padding:0rem 0rem 0rem 0rem;}
     color: $colorTxtN;
     padding:0px;
     margin-bottom:10px;
-    height: 450px;
-    h2{font-size: $h2;padding:2rem 2rem 0rem 2rem;}
-    h3{font-size:$h3;padding: 0rem 2rem 0rem 2rem;}
+  
+    h2{font-size: 1.2rem;padding: 0rem 0rem 0rem 0rem;}
+    h3{ font-size:1rem;padding: 0rem 0rem 0rem 0rem;}
 }
 .csttxtCardBlog{
     @extend .cstCardBlog;
@@ -43,8 +45,9 @@
     @extend .csttxtCardBlog;
     text-align: center;
     align-content: center;
-    max-width: 28rem;
-    max-height: 2.5rem;
+    width: 100%;
+    font-size: 10px;
+    height: 2rem;
     /*background-color: $bgList;*/
     justify-content:center;
     border: solid 5px $bgSecundario;

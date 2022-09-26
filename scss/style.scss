@@ -45,13 +45,11 @@ div{
     color:$colorTxt;
     border: solid 2px $colorTxtN;
     a{text-decoration:none;color:$colorTxt;}
-        &:hover{background-color:$bgSecundario;}
-    
+        &:hover{background-color:$bgSecundario;}  
 }
 .btn{
     @include btn
 }
-
 .add{
     @extend .btn;
     background-color: $colorTxt;

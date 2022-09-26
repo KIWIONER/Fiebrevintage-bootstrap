@@ -36,29 +36,31 @@ header {
   margin-bottom: 4rem; }
 
 .cstCardBlog, .csttxtCardBlog, .indice {
+  border: none;
+  box-shadow: none;
   color: #000000;
   padding: 0px;
-  margin-bottom: 10px;
-  height: 450px; }
+  margin-bottom: 10px; }
   .cstCardBlog a, .csttxtCardBlog a, .indice a {
     text-decoration: none;
     color: #ffffff; }
   .cstCardBlog img, .csttxtCardBlog img, .indice img {
-    width: 29rem;
-    height: 15rem;
-    padding: 1rem 2rem 0rem 2rem; }
+    width: 100%;
+    height: 50%;
+    padding: 0rem 0rem 0rem 0rem; }
   .cstCardBlog h2, .csttxtCardBlog h2, .indice h2 {
-    font-size: 25px;
-    padding: 2rem 2rem 0rem 2rem; }
+    font-size: 1.2rem;
+    padding: 0rem 0rem 0rem 0rem; }
   .cstCardBlog h3, .csttxtCardBlog h3, .indice h3 {
-    font-size: 20px;
-    padding: 0rem 2rem 0rem 2rem; }
+    font-size: 1rem;
+    padding: 0rem 0rem 0rem 0rem; }
 
 .indice {
   text-align: center;
   align-content: center;
-  max-width: 28rem;
-  max-height: 2.5rem;
+  width: 100%;
+  font-size: 10px;
+  height: 2rem;
   /*background-color: $bgList;*/
   justify-content: center;
   border: solid 5px #adff2f;
